@@ -21,30 +21,41 @@ const about = () => (
               ABOUT US
             </h2>
             <p className="text-white">
-              Reprehenderit duis commodo deserunt aliqua minim id do id. Ex
-              veniam do quis ipsum. Elit sint nulla ipsum sint cupidatat magna.
-              Excepteur aliquip nisi sit nisi eiusmod. Est reprehenderit ut enim
-              laborum velit Lorem nostrud consectetur mollit dolore et ipsum.
-              Aliqua eiusmod mollit mollit sunt nisi labore magna qui nostrud.
-              Adipisicing fugiat nulla laborum quis velit quis ipsum consectetur
-              do est laboris.
+              GLOBE SERVICES INC. With over 30 years of experience in the
+              Logistics and Transportation arenas, our personnel is one of the
+              most qualified in today’s Industry. We custom tailor the
+              customer’s needs to fit every budget without compromising safety &
+              security.
             </p>
             <br />
             <p className="text-white">
-              Eu mollit laborum est ea eu tempor non mollit veniam velit anim
-              esse. Deserunt tempor minim consequat veniam aliqua officia esse
-              irure velit exercitation. Qui consectetur do anim esse nulla irure
-              id ad qui dolor. Et nostrud laboris quis excepteur proident ipsum.
-              Aliqua proident et aute sit deserunt. Consectetur sint quis aute
-              eiusmod ad eiusmod. Amet qui et proident est nisi magna est velit
-              amet. Labore in veniam pariatur commodo sunt id incididunt aliquip
-              laborum mollit. Non tempor quis magna irure nulla Lorem et eu
-              reprehenderit. Tempor nisi exercitation mollit fugiat laboris
-              aliqua cillum eu proident deserunt duis. Qui mollit consectetur
-              minim duis incididunt sunt reprehenderit est culpa magna eiusmod
-              veniam consectetur. Ullamco magna elit pariatur veniam duis
-              excepteur aliquip exercitation. Ex reprehenderit ad laborum aliqua
-              anim adipisicing consectetur ex irure aliquip.
+              GLOBE SERVICES INC.has an effective system of transportation
+              logistics and management. Using cutting edge technology, we
+              improve response time and coordination of services. Our
+              outstanding customer satisfaction record clearly reinforces our
+              claim that GLOBE SERVICES INC. is the nation’s finest.
+            </p>
+            <br />
+            <p className="text-white">
+              GLOBE SERVICES INC. currently employs professional personnel, and
+              a superb office staff. Therefore, no job is too big or too small.
+              We run a background check and conduct random drug-screens on all
+              of our employees. At GLOBE SERVICES INC., safety & security is our
+              biggest concern.
+            </p>
+
+            <br />
+            <p className="text-white">
+              GLOBE SERVICES INC. is a US Customs Broker licensed with CBP, US
+              Department of Transportation, the Transportation Security
+              Administration and IATA certified Dangerous Goods
+            </p>
+
+            <br />
+            <p className="text-white">
+              GLOBE SERVICES INC. is a member of the US Customs Brokers and
+              Forwarders Association and is frequently recognized for integrity
+              and reliability. Also is insured and bonded
             </p>
           </div>
         </div>

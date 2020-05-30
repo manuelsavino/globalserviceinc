@@ -5,41 +5,20 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Card from "../components/Card"
 const servicesArr = [
-  {
-    name: "Service Title",
-    desc:
-      "Est ex deserunt consequat tempor in mollit proident ullamco labore occaecat exercitation aliqua.",
-  },
-  {
-    name: "Service Title 2",
-    desc: "Cillum cillum pariatur amet mollit esse aliqua fugiat veniam et.",
-  },
-  {
-    name: "Service Title 2",
-    desc: "Eu reprehenderit est et in ea proident anim consequat.",
-  },
-  {
-    name: "Service Title 2",
-    desc:
-      "Minim ullamco ad enim ut laboris enim laborum esse mollit commodo sint.",
-  },
-  {
-    name: "Service Title 2",
-    desc:
-      "Veniam officia ut non Lorem non sunt ipsum do reprehenderit voluptate ad magna magna.",
-  },
-  {
-    name: "Service Title 2",
-    desc: "Fugiat fugiat veniam magna cillum ipsum amet est consectetur.",
-  },
-  {
-    name: "Service Title 2",
-    desc: "Adipisicing incididunt deserunt sunt sunt aute ea.",
-  },
-  {
-    name: "Service Title 2",
-    desc: "Fugiat fugiat veniam magna cillum ipsum amet est consectetur.",
-  },
+  { name: "US Customs Licensed Broker" },
+  { name: "Bonded freight transportation" },
+  { name: "IATA Certified instructor" },
+  { name: "Dangerous Goods inspection, packing, labeling and supplies" },
+  { name: "Hazardous Materials transportation" },
+  { name: "Expedited service" },
+  { name: "Round-the-clock service" },
+  { name: "Real time status updates using GPS" },
+  { name: "Specialized shipping" },
+  { name: "Next day and dedicated services" },
+  { name: "Flatbed transportation" },
+  { name: "Drop deck services" },
+  { name: "Van Trailers" },
+  { name: "Advanced dispatching capabilities" },
 ]
 
 const services = () => (
@@ -49,13 +28,13 @@ const services = () => (
       <h1 className="text-4xl mt-5 roboto text-center sm:text-left font-black">
         Our Services
       </h1>
-      <div className="container services mx-auto mb-10 flex flex-wrap justify-center sm:justify-between">
+      <div className="container services mx-auto mb-10  justify-center sm:justify-between">
         {servicesArr.map(s => (
-          <Card>
-            <img src="https://via.placeholder.com/150"></img>
-            <h2 className="text-lg">{s.name}</h2>
-            <p className="max-w-xs">{s.desc}</p>
-          </Card>
+          // <Card>
+          //   {/* <img src="https://via.placeholder.com/150"></img> */}
+          <h2 className="text-xl text">{s.name}</h2>
+          // <p className="max-w-xs">{s.desc}</p>{" "}
+          // </Card>
         ))}
       </div>
     </div>
