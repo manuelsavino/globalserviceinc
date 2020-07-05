@@ -22,12 +22,12 @@ const IndexPage = () => (
             We not only promise to deliver exceprional service; we promise a
             pleasurable experience
           </h2>
-          <Link
+          {/* <Link
             to="/contact"
             className="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-5 rounded"
           >
             Contact Us
-          </Link>
+          </Link> */}
         </div>
       </div>
     </Hero>
