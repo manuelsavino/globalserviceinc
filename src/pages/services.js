@@ -1,9 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Card from "../components/Card"
+import Hero from "../components/Hero"
+import cargoShip from "../images/cargoPlanes.jpg"
 const servicesArr = [
   { name: "US Customs Licensed Broker" },
   { name: "Bonded freight transportation" },
@@ -24,20 +24,29 @@ const servicesArr = [
 const services = () => (
   <Layout>
     <SEO title="Services" />
-    <div className="container mx-auto">
-      <h1 className="text-4xl mt-5 roboto text-center sm:text-left font-black">
-        Our Services
-      </h1>
-      <div className="container services mx-auto mb-10  justify-center sm:justify-between">
-        {servicesArr.map(s => (
-          // <Card>
-          //   {/* <img src="https://via.placeholder.com/150"></img> */}
-          <h2 className="text-xl text">{s.name}</h2>
-          // <p className="max-w-xs">{s.desc}</p>{" "}
-          // </Card>
-        ))}
+    <Hero
+      image={cargoShip}
+      height="80vh"
+      gradient="linear-gradient(90deg, #FFFFFF 0%, #6284FF 50%, #F37979 100%);"
+      // pattern={bgiIsometricGrid}
+    >
+      <div className="container mx-auto pt-3">
+        <div className="container p-10">
+          <div className=" bg-black-seethrough p-8 rounded-md">
+            <h2 className="text-4xl sm:text-6xl md:text-6xl  text-white heading leading-none font-black mb-10">
+              OUR SERVICES
+            </h2>
+            <div className="container services mx-auto mb-10  justify-center sm:justify-between">
+              {servicesArr.map(s => (
+                <h2 key={s.name} className="text-xl text-white">
+                  {s.name}
+                </h2>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </Hero>
   </Layout>
 )
 

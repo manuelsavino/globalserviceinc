@@ -8,26 +8,23 @@ import Glove from "../images/worldwide.svg"
 export default function Navigation() {
   const [opened, toggleNav] = useState(false)
   return (
-    <div class="nav">
-      <div className="innerNav">
-        <Link
-          to="/"
-          className="roboto text-white text-lg sm:text-3xl ml-3 font-black flex"
-        >
-          <img src={Glove} className="w-6 mr-3"></img>GLOBE SERVICES INC
-        </Link>
-        <div class="subNav desktopNav">
-          <Link to="/">Home</Link>
-          <Link to="/aboutUs">About Us</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
+    <nav class="flex items-center justify-between flex-wrap bg-black p-6">
+      <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <img className="w-10 mr-3" src={Glove} />
+
+        <span class="font-semibold text-xl tracking-tight">
+          GLOBE SERVICES INC
+        </span>
+      </div>
+      <div class="block md:hidden">
         <button
           onClick={() => {
             toggleNav(!opened)
             opened === true ? disableScroll.off() : disableScroll.on()
           }}
-          className={`hamburger hamburger--3dx ${opened ? "is-active" : ""}`}
+          className={`hamburger hamburger--3dx p-1 ${
+            opened ? "is-active" : ""
+          }`}
           type="button"
         >
           <span className="hamburger-box">
@@ -35,42 +32,32 @@ export default function Navigation() {
           </span>
         </button>
       </div>
-      <div className={`mobSideBar ${opened ? "toggleSideBar" : ""}`}>
-        <div className="subNav sideBar">
+      <div
+        class={`w-full md:flex md:items-center md:w-auto ${
+          opened ? "" : "hidden"
+        }`}
+      >
+        <div class="text-lg md:flex-grow">
           <Link
-            onClick={() => {
-              disableScroll.off()
-            }}
             to="/"
+            className="block mt-4 md:inline-block md:mt-0 text-white hover:text-teal-500 mr-4 "
           >
             Home
           </Link>
           <Link
-            onClick={() => {
-              disableScroll.off()
-            }}
             to="/aboutUs"
+            className="block mt-4 md:inline-block md:mt-0 text-white hover:text-teal-500 mr-4 "
           >
-            About Us
+            About
           </Link>
           <Link
-            onClick={() => {
-              disableScroll.off()
-            }}
             to="/services"
+            className="block mt-4 md:inline-block md:mt-0 text-white hover:text-teal-500 "
           >
             Services
           </Link>
-          <Link
-            onClick={() => {
-              disableScroll.off()
-            }}
-            to="/contact"
-          >
-            Contact
-          </Link>
         </div>
       </div>
-    </div>
+    </nav>
   )
 }
