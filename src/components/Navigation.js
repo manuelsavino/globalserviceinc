@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import "hamburgers/dist/hamburgers.min.css"
 import "./layout.css"
-import disableScroll from "disable-scroll"
 import { Link } from "gatsby"
 import Glove from "../images/worldwide.svg"
 
@@ -11,7 +10,11 @@ export default function Navigation() {
     <div className="bg-black ">
       <nav className="flex container mx-auto items-center justify-between flex-wrap bg-black p-3">
         <div className="flex  items-center flex-shrink-0 text-white mr-6">
-          <img className="w-10 mr-3" src={Glove} />
+          <img
+            alt="globe services inc logo"
+            className="w-10 mr-3"
+            src={Glove}
+          />
 
           <span class="font-semibold text-xl tracking-tight">
             GLOBE SERVICES INC

@@ -2,7 +2,6 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Hero from "../components/Hero"
 import cargoShip from "../images/cargoPlanes.jpg"
 const servicesArr = [
   { name: "US Customs Licensed Broker" },
@@ -24,29 +23,21 @@ const servicesArr = [
 const services = () => (
   <Layout>
     <SEO title="Services" />
-    <Hero
-      image={cargoShip}
-      height="80vh"
-      gradient="linear-gradient(90deg, #FFFFFF 0%, #6284FF 50%, #F37979 100%);"
-      // pattern={bgiIsometricGrid}
-    >
-      <div className="container mx-auto pt-3">
-        <div className="container p-10">
-          <div className=" bg-black-seethrough p-8 rounded-md">
-            <h2 className="text-4xl sm:text-6xl md:text-6xl  text-white heading leading-none font-black mb-10">
-              OUR SERVICES
-            </h2>
-            <div className="container services mx-auto mb-10  justify-center sm:justify-between">
-              {servicesArr.map(s => (
-                <h2 key={s.name} className="text-xl text-white">
-                  {s.name}
-                </h2>
-              ))}
-            </div>
-          </div>
+    <div className="container  mx-auto mt-5">
+      <h1 className="text-4xl sm:text-6xl md:text-6xl text-gray-900 heading leading-none font-black mb-5">
+        OUR SERVICES
+      </h1>
+      <div className="flex flex-col sm:flex-col md:flex-row mb-5">
+        <div className="container services mx-auto mb-10 md-py-4 justify-center sm:justify-between">
+          {servicesArr.map(s => (
+            <p key={s.name} className="text-xl text-blac">
+              {s.name}
+            </p>
+          ))}
         </div>
+        <img className="w-full md:w-1/2" src={cargoShip} />
       </div>
-    </Hero>
+    </div>
   </Layout>
 )
 

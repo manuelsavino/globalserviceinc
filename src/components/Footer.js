@@ -13,7 +13,7 @@ export default function Footer() {
         <p>Miami, FL 33172</p>
         <a href="tel:305-431-3714">305-431-3714</a>
         <div className="flex mt-2">
-          <img src={FooterLogo} />
+          <img alt="logos of partners" src={FooterLogo} />
         </div>
         <div className="flex mt-2">
           <p>
