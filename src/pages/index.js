@@ -32,26 +32,32 @@ const IndexPage = () => (
       </div>
     </Hero>
     <div className="container mx-auto my-5 m p-10 shadow-xl rounded-md">
-      <p>
-        <strong>GLOBE SERVICES INC.</strong> is the Integrated Logistics
-        purveyor of choice across the land. We are ready to handle complex
-        logistics with in house, Dangerous Goods specialists that perform in
-        compliance with IATA and 49 CFR, Inspections, packing and labeling.
-        Also, US Customs Broker and bonded carrier capable of coordinating the
-        movement of Bonded and domestic freight between plants, ports,
-        warehouses, or any destination. Our coordinated services allows the
-        handling of any cargo between locations and bring products to market.
-        Whether transcontinental or regional, we have an integrated plan to meet
-        your needs. We are proud to offer specialized services cater to meet
-        your individual needs.
+      <p style={{ textIndent: "35px" }}>
+        From our centrally located office in Doral, Florida{" "}
+        <strong>Globe Services Inc.</strong> has become one of South Florida’s
+        premier Integrated Logistics Providers offering a selection of full
+        service and concierge import and export services. With over 30 years of
+        experience in the Logistics and Transportation areas, our personnel are
+        one of the most qualified in across the industry. We custom tailor our
+        services to match our customer’s budget without compromising safety &
+        security. We have improved response time and streamlined the import
+        process for our clients while allowing them to save money, time and
+        headaches by handling all things in house.
       </p>
       <p className="mt-3">
-        From our centrally located office in Doral, Florida. We are a CTPAT,
-        IAC, US Customs, IATA certified company that coordinates your requests
-        with speed and precision. Our on-time and safety records are remarkable
-        and illustrate why GLOBE SERVICES INC. is regarded as one of the
-        nation's finest. GLOBE SERVICES INC. can give you a competitive
-        advantage. Ensure that your cargo is there on time, every time.
+        We are a CTPAT, IAC, US Customs, IATA certified company that coordinates
+        your requests with speed and precision. Our on-time deliveries, customer
+        satisfaction, and safety records are remarkable and illustrate why we
+        are regarded as one of the nation's finest, we ensure that your cargo is
+        there on time, every time. Whether transcontinental or regional, we have
+        an integrated plan to meet your needs.
+      </p>
+      <p className="mt-3">
+        We pride ourselves in employing professional personnel and office staff
+        and run background checks on all employees as well as conduct random
+        drug-screens. Safety &amp; security is our biggest concern and
+        maintaining the integrity of our client’s products and information is
+        our number one priority.
       </p>
     </div>
   </Layout>
