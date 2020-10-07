@@ -7,18 +7,18 @@ import SEO from "../components/seo"
 const Contact = () => (
   <Layout>
     <SEO title="Contact Us" />
-    <div className="container  mx-auto mt-5">
+    <div className="container px-5 sm:mx-5 md:mx-auto mt-5">
       <h1 className="text-4xl sm:text-6xl md:text-6xl text-gray-900 heading leading-none font-black mb-5">
         CONTACT US
       </h1>
-      <div className="flex flex-col sm:flex-col md:flex-row mb-5">
+      <div className="flex flex-col sm:flex-col md:flex-row">
         <iframe
           height="550"
           frameborder="0"
           scrolling="no"
           marginheight="0"
           marginwidth="0"
-          className="w-full md:w-1/2"
+          className="w-full md:w-1/2 mb-10"
           src="https://www.openstreetmap.org/export/embed.html?bbox=-80.38160081952812%2C25.795952598229025%2C-80.37451978772879%2C25.800019263152144&amp;layer=mapnik&amp;marker=25.797985948130673%2C-80.37806030362844"
         ></iframe>
 

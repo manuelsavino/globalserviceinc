@@ -49,16 +49,16 @@ export default function Navigation() {
               Home
             </Link>
             <Link
-              to="/contact"
-              className="block mt-4 md:inline-block md:mt-0 text-white hover:text-teal-500 mr-4 "
-            >
-              Contact
-            </Link>
-            <Link
               to="/services"
-              className="block mt-4 md:inline-block md:mt-0 text-white hover:text-teal-500 "
+              className="block mt-4 md:inline-block md:mt-0 text-white hover:text-teal-500 mr-4"
             >
               Services
+            </Link>
+            <Link
+              to="/contact"
+              className="block mt-4 md:inline-block md:mt-0 text-white hover:text-teal-500  "
+            >
+              Contact
             </Link>
           </div>
         </div>
