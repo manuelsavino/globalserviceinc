@@ -16,7 +16,7 @@ export default function Navigation() {
             src={Glove}
           />
 
-          <span class="font-semibold text-xl tracking-tight">
+          <span className="font-semibold text-xl tracking-tight">
             GLOBE SERVICES INC
           </span>
         </div>
@@ -41,7 +41,7 @@ export default function Navigation() {
             opened ? "" : "hidden"
           }`}
         >
-          <div class="text-lg md:flex-grow">
+          <div className="text-lg md:flex-grow">
             <Link
               to="/"
               className="block mt-4 md:inline-block md:mt-0 text-white hover:text-teal-500 mr-4 "

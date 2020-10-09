@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import cargoShip from "../images/cargoPlanes.jpg"
-import Box from "../images/box.svg"
+// import Box from "../images/box.svg"
 
 const servicesArr = [
   { name: "US Customs Licensed Broker" },
@@ -22,22 +22,22 @@ const servicesArr = [
   { name: "Advanced dispatching capabilities" },
 ]
 
-const Li = styled.li`
-  padding-bottom: 5px;
-  &:last-child {
-    padding-bottom: 50px;
-  }
-  &:before {
-    content: "";
-    display: inline-block;
-    height: 1em;
-    width: 1em;
-    background-image: url(${Box});
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-right: 0.5em;
-  }
-`
+// const Li = styled.li`
+//   padding-bottom: 5px;
+//   &:last-child {
+//     padding-bottom: 50px;
+//   }
+//   &:before {
+//     content: "";
+//     display: inline-block;
+//     height: 1em;
+//     width: 1em;
+//     /* background-image: url(${Box}); */
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     margin-right: 0.5em;
+//   }
+// `
 
 const services = () => (
   <Layout>
@@ -50,12 +50,12 @@ const services = () => (
         <div className="container services justify-center sm:justify-between">
           <ul>
             {servicesArr.map(s => (
-              <Li
+              <li
                 key={s.name}
                 className="service text-base sm:text-lg md:text-xl text-black pl-2 leading-none sm:leading-snug md:leading-normal"
               >
                 {s.name}
-              </Li>
+              </li>
             ))}
           </ul>
         </div>
