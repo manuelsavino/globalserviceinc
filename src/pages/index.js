@@ -42,7 +42,7 @@ class Index extends React.Component {
           <div className="container mx-auto pt-3">
             <div className="container p-10 w-2/3">
               <h2 className="text-4xl sm:text-6xl md:text-6xl  text-white heading leading-none font-black mb-10">
-                We not only promise to deliver exceprional service; we promise a
+                We not only promise to deliver exceptional service; we promise a
                 pleasurable experience
               </h2>
             </div>
