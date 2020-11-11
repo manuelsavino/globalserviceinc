@@ -11,7 +11,18 @@ function encode(data) {
 }
 
 const Contact = () => {
-  const [data, setData] = useState({ datadata: "test" })
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  })
+
+  const handleChange = e => {
+    console.log(e.target.name)
+    console.log(e.target.value)
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -21,7 +32,7 @@ const Contact = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
-        ...data,
+        ...formData,
       }),
     })
       .then(() => navigate(form.getAttribute("action")))
@@ -30,6 +41,7 @@ const Contact = () => {
 
   return (
     <Layout>
+      {console.log(formData)}
       <SEO title="Contact Us" />
       <div className="container px-5 sm:mx-5 md:mx-auto mt-5">
         <h1 className="text-4xl sm:text-6xl md:text-6xl text-gray-900 heading leading-none font-black mb-5">
@@ -65,10 +77,11 @@ const Contact = () => {
                 </label>
                 <input
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                  id="grid-first-name"
                   type="text"
                   name="firstName"
                   placeholder="Jane"
+                  value={formData.firstName}
+                  onChange={handleChange}
                 />
               </div>
               <div className="w-full md:w-1/2 px-3">
@@ -80,10 +93,11 @@ const Contact = () => {
                 </label>
                 <input
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-last-name"
                   type="text"
                   name="lastName"
                   placeholder="Doe"
+                  value={formData.lastName}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -97,9 +111,10 @@ const Contact = () => {
                 </label>
                 <input
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="email"
                   name="email"
                   type="email"
+                  value={formData.email}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -115,6 +130,8 @@ const Contact = () => {
                   className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
                   id="message"
                   name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                 ></textarea>
               </div>
             </div>
