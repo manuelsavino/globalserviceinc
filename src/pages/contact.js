@@ -18,25 +18,52 @@ const Contact = () => {
     message: "",
   })
 
+  const [validate, setValidate] = useState({
+    firstName: null,
+    lastName: null,
+    email: null,
+  })
+
   const handleChange = e => {
-    console.log(e.target.name)
-    console.log(e.target.value)
+    if (e.target.value !== "") {
+      setValidate({ ...validate, [e.target.name]: false })
+    }
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
   const handleSubmit = e => {
     e.preventDefault()
-    const form = e.target
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...formData,
-      }),
-    })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch(error => alert(error))
+    if (
+      formData.firstName != "" &&
+      formData.lastName != "" &&
+      formData.email != ""
+    ) {
+      setValidate({})
+      const form = e.target
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": form.getAttribute("name"),
+          ...formData,
+        }),
+      })
+        .then(() => navigate(form.getAttribute("action")))
+        .catch(error => alert(error))
+    } else {
+      const validateTemp = { firstName: null, lastName: null, email: null }
+
+      if (formData.firstName === "") {
+        validateTemp.firstName = true
+      }
+      if (formData.lastName === "") {
+        validateTemp.lastName = true
+      }
+      if (formData.email === "") {
+        validateTemp.email = true
+      }
+      setValidate(validateTemp)
+    }
   }
 
   return (
@@ -59,7 +86,7 @@ const Contact = () => {
           ></iframe>
 
           <form
-            className="w-full md:w-1/2 md:ml-5"
+            className="mb-4 w-full md:w-1/2 md:ml-5"
             method="post"
             onSubmit={handleSubmit}
             netlify-honeypot="bot-field"
@@ -76,7 +103,9 @@ const Contact = () => {
                   First Name
                 </label>
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  className={`appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white ${
+                    validate.firstName ? "border-red-500" : ""
+                  }`}
                   type="text"
                   name="firstName"
                   placeholder="Jane"
@@ -92,7 +121,9 @@ const Contact = () => {
                   Last Name
                 </label>
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  className={`appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white ${
+                    validate.lastName ? "border-red-500" : ""
+                  }`}
                   type="text"
                   name="lastName"
                   placeholder="Doe"
@@ -110,7 +141,9 @@ const Contact = () => {
                   E-mail
                 </label>
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  className={`appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white ${
+                    validate.email ? "border-red-500" : ""
+                  }`}
                   name="email"
                   type="email"
                   value={formData.email}
@@ -127,7 +160,7 @@ const Contact = () => {
                   Message
                 </label>
                 <textarea
-                  className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
+                  className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4  leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
                   id="message"
                   name="message"
                   value={formData.message}

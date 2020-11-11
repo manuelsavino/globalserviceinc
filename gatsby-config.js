@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Globe Services Inc.`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `manuels.dev`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -36,7 +36,7 @@ module.exports = {
         background_color: `#1c1c1c`,
         theme_color: `#1c1c1c`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/worldwideb.svg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
