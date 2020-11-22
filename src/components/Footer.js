@@ -7,7 +7,12 @@ export default function Footer() {
     <footer className="footer flex justify-center border-t-4 border-blue-600 ">
       <div className="container flex mx-auto justify-center flex-col items-center mt-2">
         <h1 className="logo text-lg sm:text-xl ml-3 font-black flex items-center mb-3">
-          <img src={Glove} className="w-6 mr-3"></img>GLOBE SERVICES INC
+          <img
+            alt="Illustration of globe"
+            src={Glove}
+            className="w-6 mr-3"
+          ></img>
+          GLOBE SERVICES INC
         </h1>
         <p>2672 NW 112 Ave</p>
         <p>Miami, FL 33172</p>

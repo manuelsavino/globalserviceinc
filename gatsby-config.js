@@ -15,14 +15,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Roboto`,
-            variants: [`400`, `500`, `900`],
-          },
-        ],
+        fonts: [`Roboto\:400,500,900`],
+        display: "swap",
       },
     },
     `gatsby-transformer-sharp`,

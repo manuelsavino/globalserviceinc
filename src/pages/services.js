@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
@@ -60,7 +60,11 @@ const services = () => {
                   {console.log(allSanityService)}
                 </ul>
               </div>
-              <img className="w-full md:w-1/2 pb-24" src={cargoShip} />
+              <img
+                alt="cargo being loaded into a plane"
+                className="w-full md:w-1/2 pb-24"
+                src={cargoShip}
+              />
             </div>
           </div>
         </Layout>
