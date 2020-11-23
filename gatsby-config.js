@@ -15,14 +15,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Roboto`,
-            variants: [`400`, `500`, `900`],
-          },
-        ],
+        fonts: [`Roboto\:400,500,900`],
+        display: "swap",
       },
     },
     `gatsby-transformer-sharp`,
@@ -37,6 +33,13 @@ module.exports = {
         theme_color: `#1c1c1c`,
         display: `minimal-ui`,
         icon: `src/images/worldwideb.svg`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: `dgyucs6k`,
+        dataset: `production`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

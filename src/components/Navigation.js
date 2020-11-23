@@ -9,17 +9,20 @@ export default function Navigation() {
   return (
     <div className="bg-black ">
       <nav className="flex container mx-auto items-center justify-between flex-wrap bg-black p-3">
-        <div className="flex  items-center flex-shrink-0 text-white mr-6">
-          <img
-            alt="globe services inc logo"
-            className="w-10 mr-3"
-            src={Glove}
-          />
+        <Link to="/">
+          <div className="flex  items-center flex-shrink-0 text-white mr-6">
+            <img
+              alt="globe services inc logo"
+              className="w-10 mr-3"
+              src={Glove}
+            />
 
-          <span className="font-semibold text-xl tracking-tight">
-            GLOBE SERVICES INC
-          </span>
-        </div>
+            <span className="font-semibold text-xl tracking-tight">
+              GLOBE SERVICES INC
+            </span>
+          </div>
+        </Link>
+
         <div className="block md:hidden">
           <button
             onClick={() => {

@@ -34,9 +34,9 @@ const Contact = () => {
   const handleSubmit = e => {
     e.preventDefault()
     if (
-      formData.firstName != "" &&
-      formData.lastName != "" &&
-      formData.email != ""
+      formData.firstName !== "" &&
+      formData.lastName !== "" &&
+      formData.email !== ""
     ) {
       setValidate({})
       const form = e.target
@@ -76,6 +76,7 @@ const Contact = () => {
         </h1>
         <div className="flex flex-col-reverse sm:flex-col md:flex-row">
           <iframe
+            title="map"
             height="550"
             frameBorder="0"
             scrolling="no"
