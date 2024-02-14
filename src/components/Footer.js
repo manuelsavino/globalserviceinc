@@ -14,8 +14,8 @@ export default function Footer() {
           ></img>
           GLOBE SERVICES INC
         </h1>
-        <p>2672 NW 112 Ave</p>
-        <p>Miami, FL 33172</p>
+        <p>8150 NW 71st Street</p>
+        <p>Miami, FL 33166</p>
         <a href="tel:305-431-3714">305-431-3714</a>
         <div className="flex mt-2">
           <img alt="logos of partners" src={FooterLogo} />
